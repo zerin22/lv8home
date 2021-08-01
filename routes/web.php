@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,18 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [FrontendController::class, 'index'])->name('homepage');
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+Route::get('about-us',[FrontendController::class, 'aboutUs'])->name('about');
 
-Route::get('about', function () {
-    return view('about');
-})->name('about');
+Route::get('contact-us', [FrontendController::class, 'contactUS'] )->name('contact');
 
-Route::get('contact',function(){
-    return view('contact');
-})->name('contact');
+
 
 Route::get('blog/{category}/{id}',function($category, $id){
     return $category.'/'.$id;
