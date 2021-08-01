@@ -24,3 +24,8 @@ Route::get('about', function () {
 Route::get('contact',function(){
     return view('contact');
 })->name('contact');
+
+Route::get('blog/{category}/{id}',function($category, $id){
+    return $category.'/'.$id;
+
+});
