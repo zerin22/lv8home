@@ -21,7 +21,4 @@ Route::get('contact-us', [FrontendController::class, 'contactUS'] )->name('conta
 
 
 
-Route::get('blog/{category}/{id}',function($category, $id){
-    return $category.'/'.$id;
-
-});
+Route::get('blog/{category}/{id}/{title}/{discription}', [FrontendController::class, 'blog'])->name('blog');

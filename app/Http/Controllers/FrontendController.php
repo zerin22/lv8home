@@ -17,4 +17,9 @@ class FrontendController extends Controller
     public function contactUs(){
         return view('contact');
     }
+
+    public function blog($category, $id, $title, $discription)
+    {
+        return view('blog', compact(['category', 'id', 'title', 'discription']));
+    }
 }
