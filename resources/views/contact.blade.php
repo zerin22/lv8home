@@ -1,5 +1,16 @@
 @extends('master')
 
+@push('css')
+
+<style>
+    body{
+
+        background-color:aquamarine;
+    }
+</style>
+
+@endpush
+
 @section('title', 'Contact')
 
 @section('content')
