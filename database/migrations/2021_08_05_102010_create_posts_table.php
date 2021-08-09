@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('category');
-            $table->longText('discription');
+            $table->longText('description');
             $table->enum('status', ['enable', 'disable']);
             $table->timestamps();
         });

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [FrontendController::class, 'index'])->name('homepage');
 
-Route::get('about-us',[FrontendController::class, 'aboutUs'])->name('about');
+Route::get('about-us', [FrontendController::class, 'aboutUs'])->name('about');
 
 Route::get('contact-us', [FrontendController::class, 'contactUS'] )->name('contact');
 
-
-
 Route::get('blog/{category}/{id}/{title}/{discription}', [FrontendController::class, 'blog'])->name('blog');
+
+Route::get('post', [PostController::class, 'index'])->name('post.index');
