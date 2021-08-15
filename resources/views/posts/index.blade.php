@@ -32,7 +32,7 @@
                             <a href="{{ route('post.show', $post->id) }}">Show</a> |
                             <a href="{{ route('post.edit', $post->id) }}">Edit</a> |
                             <a href="" onclick="event.preventDefault();document.getElementById('delete-form{{ $post->id }}').submit();">Delete</a>
-                            <form action="{{ route('post.destory', $post->id) }}" id="delete-form{{ $post->id }}" method="POST">
+                            <form action="{{ route('post.destroy', $post->id) }}" id="delete-form{{ $post->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                             </form>
